@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infused Cigar KC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Background Fade Overlay -->
+    <div class="background-fade-overlay"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="vet2.jpg" alt="Veteran Flag Logo">
+        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#types">Types of Cigars</a></li>
+            <li><a href="#events">Events We Cater To</a></li>
+        </ul>
+    </nav>
+
+    <!-- SCHEDULE BUTTON -->
+    <div class="schedule-btn-container">
+        <button id="openScheduleBtn" class="schedule-btn">Schedule an Event</button>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+        <h1>About</h1>
+        <p>
+            We created <span class="logo-text">Infused C's</span> to bring a uniquely elevated cigar experience to Kansas City—one that blends craftsmanship, hospitality, and flavor. Every cigar is hand-infused in small batches, ensuring a smooth, memorable draw that appeals to enthusiasts and first-time cigar guests. From upscale celebrations to KC's most vibrant events, our goal is to make premium cigars accessible, enjoyable, and unforgettable for all who gather around them.
+        </p>
+    </section>
+
+    <!-- TYPES OF CIGARS -->
+    <section id="types" class="section types-section">
+        <h1>Types of Cigars</h1>
+
+        <div class="cigar-grid">
+            <div class="cigar-card">
+                <h2>Buffalo Trace Straight Bourbon Whiskey</h2>
+                <p>Experience the rich, smooth flavor of our Buffalo Trace infused cigars. These premium cigars are carefully infused with the distinctive notes of Buffalo Trace Straight Bourbon Whiskey, creating a unique and memorable smoking experience.</p>
+            </div>
+
+            <div class="cigar-card">
+                <h2>Blanton's Single Barrel</h2>
+                <p>Indulge in the exceptional quality of our Blanton's Single Barrel infused cigars. Each cigar is crafted to complement the complex, full-bodied character of Blanton's Single Barrel bourbon, offering a sophisticated and refined taste.</p>
+            </div>
+
+            <div class="cigar-card">
+                <h2>Woodford Reserve Double Oak</h2>
+                <p>Discover the bold and robust flavors of our Woodford Reserve Double Oak infused cigars. The double-barrel aging process of Woodford Reserve creates a unique profile that perfectly enhances the premium tobacco, delivering an unparalleled smoking experience.</p>
+            </div>
+
+            <div class="cigar-card">
+                <h2>Conundrum Red Wine (Wagner Family, Maker of Caymus)</h2>
+                <p>Experience the luxurious complexity of our Conundrum Red Wine infused cigars. From the renowned Wagner Family, makers of Caymus, these cigars are infused with the rich, full-bodied character of Conundrum Red Wine, offering a truly exceptional and refined smoking experience.</p>
+            </div>
+
+            <div class="cigar-card">
+                <h2>Maker's Mark® 46 French Oak Bourbon</h2>
+                <p>Maker's was released in 1958. Aged longer with special seared French oak staves, Maker's Mark 46 delivers subtly layered bourbon notes with a smooth, balanced complexity that pairs exceptionally well with premium tobacco.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="section events-section">
+        <h1>Events We Cater To</h1>
+
+        <div class="events-grid">
+            <div class="event-card">Weddings</div>
+            <div class="event-card">Bachelor & Bachelorette Parties</div>
+            <div class="event-card">Corporate Events</div>
+            <div class="event-card">Private Parties</div>
+            <div class="event-card">Birthday Celebrations</div>
+            <div class="event-card">Cigar & Whiskey Pairing Events</div>
+            <div class="event-card">Golf Tournaments</div>
+            <div class="event-card">VIP Experiences</div>
+            <div class="event-card">Food Trucks</div>
+            <div class="event-card">Tailgating</div>
+            <div class="event-card">Hunting Trips</div>
+            <div class="event-card">Back Porch Gatherings</div>
+        </div>
+    </section>
+
+    <!-- EVENT SCHEDULER MODAL -->
+    <div id="scheduleModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+
+            <h2>Schedule an Event</h2>
+
+            <form class="event-form" id="eventForm" method="post" action="javascript:void(0)">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="tel" placeholder="Phone" name="phone" required>
+
+                <input type="date" name="dob" required aria-label="Date of Birth">
+
+                <label class="attestation">
+                    <input type="checkbox" name="age_certify" required>
+                    I certify that I am 21 or older.
+                </label>
+
+                <select name="event_type" required>
+                    <option value="">Select Event Type</option>
+                    <option>Weddings</option>
+                    <option>Bachelor & Bachelorette Parties</option>
+                    <option>Corporate Events</option>
+                    <option>Private Parties</option>
+                    <option>Birthday Celebrations</option>
+                    <option>Cigar & Whiskey Pairing Events</option>
+                    <option>Golf Tournaments</option>
+                    <option>VIP Experiences</option>
+                    <option>Food Trucks</option>
+                    <option>Tailgating</option>
+                    <option>Hunting Trips</option>
+                    <option>Back Porch Gatherings</option>
+                </select>
+
+                <input type="date" name="event_date" required>
+                <textarea placeholder="Additional Information" name="notes"></textarea>
+
+                <p class="availability-note">
+                    *By submitting, you confirm you are 21+ (ID may be required at the event).*
+                </p>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
